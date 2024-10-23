@@ -7,7 +7,7 @@ async function uploadImage( file, containerName = "kinderblobby") {
   const sasToken =
     ""; // Replace with your SAS token
   // Replace with your container name
-  const storageAccountName = ""; // Replace with your storage account name
+  const storageAccountName = "kinderstorageblob"; // Replace with your storage account name
 
   const blobService = new BlobServiceClient(
     `https://${storageAccountName}.blob.core.windows.net/?${sasToken}`
@@ -28,7 +28,7 @@ const Upload = () => {
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
-   const containerName = "";//Replace with your container name
+  const containerName = "kinderblobby";
 
   const handleSubmit = (event) => {
     event.preventDefault();
